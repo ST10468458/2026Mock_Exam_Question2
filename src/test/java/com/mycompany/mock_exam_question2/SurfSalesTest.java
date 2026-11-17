@@ -6,68 +6,51 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 public class SurfSalesTest {
-    
+
     public SurfSalesTest() {
     }
 
     @Test
-    public void testGetProductSales() {
-        System.out.println("GetProductSales");
+    public void testGetProductSales_ReturnsSalesArray() {
         SurfSales instance = new SurfSales();
-        int[][] expResult = null;
         int[][] result = instance.GetProductSales();
-        assertArrayEquals(expResult, result);
-        fail("The test case is a prototype.");
+        assertEquals(3, result.length);
+        assertArrayEquals(new int[] {520, 380, 150}, result[0]);
     }
 
     @Test
-    public void testGetTotalSales() {
-        System.out.println("GetTotalSales");
+    public void testGetTotalSales_ReturnsTotalSales() {
         SurfSales instance = new SurfSales();
-        int expResult = 0;
         int result = instance.GetTotalSales();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
+        assertEquals(3150, result);
     }
 
     @Test
-    public void testGetSalesOverTarget() {
-        System.out.println("GetSalesOverTarget");
+    public void testGetSalesOverTarget_ReturnsNumberOfSales() {
         SurfSales instance = new SurfSales();
-        int expResult = 0;
         int result = instance.GetSalesOverTarget();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
+        assertEquals(3, result);
     }
 
     @Test
-    public void testGetSalesUnderTarget() {
-        System.out.println("GetSalesUnderTarget");
+    public void testGetSalesUnderTarget_ReturnsNumberOfSales() {
         SurfSales instance = new SurfSales();
-        int expResult = 0;
         int result = instance.GetSalesUnderTarget();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
+        assertEquals(6, result);
     }
 
     @Test
-    public void testGetYearsProcessed() {
-        System.out.println("GetYearsProcessed");
+    public void testGetYearsProcessed_ReturnsNumberOfYears() {
         SurfSales instance = new SurfSales();
-        int expResult = 0;
         int result = instance.GetYearsProcessed();
-        assertEquals(expResult, result);
-        fail("The test case is a prototype.");
+        assertEquals(3, result);
     }
 
     @Test
-    public void testGetAverageSales() {
-        System.out.println("GetAverageSales");
+    public void testGetAverageSales_ReturnsAverageSales() {
         SurfSales instance = new SurfSales();
-        double expResult = 0.0;
         double result = instance.GetAverageSales();
-        assertEquals(expResult, result, 0);
-        fail("The test case is a prototype.");
+        assertEquals(350.0, result, 0.01);
     }
-    
+
 }
